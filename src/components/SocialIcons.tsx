@@ -11,7 +11,7 @@ const SocialIcons = () => {
     social.querySelectorAll("span").forEach((item) => {
       const elem = item as HTMLElement;
       const link = elem.querySelector("a") as HTMLElement;
-      const rect = elem.getBoundingClientRect();
+      let rect = elem.getBoundingClientRect();
       let mouseX = rect.width / 2;
       let mouseY = rect.height / 2;
       let currentX = 0;
@@ -25,6 +25,7 @@ const SocialIcons = () => {
         rafId = requestAnimationFrame(updatePosition);
       };
       const onMouseMove = (e: MouseEvent) => {
+        rect = elem.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
         if (x < 40 && x > 10 && y < 40 && y > 5) {
