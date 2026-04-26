@@ -385,6 +385,34 @@
     margin: 0;
   }
 }
+
+/* ── Small mobile heights ── */
+@media only screen and (max-width: 480px) {
+  .what-box h2 {
+    font-size: 44px;
+    line-height: 42px;
+    margin: 30px 0;
+  }
+  .what-box:last-child {
+    height: 500px;
+  }
+  .what-box-in {
+    height: 470px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .what-box:last-child {
+    height: 440px;
+  }
+  .what-box-in {
+    height: 410px;
+  }
+  .what-content h3 {
+    font-size: 20px;
+  }
+}
+
 @media only screen and (min-width: 1950px) {
   .what-box h2 {
     font-size: 7rem;

@@ -395,3 +395,41 @@ h2.landing-info-h2 {
     font-size: 75px;
   }
 }
+
+/* ── Small mobile tweaks ── */
+@media screen and (max-width: 499px) {
+  .character-model {
+    height: 65vh;
+    bottom: 30px;
+  }
+
+  .landing-intro {
+    top: 8%;
+  }
+
+  .landing-intro h2 {
+    font-size: 16px;
+  }
+
+  .landing-intro h1 {
+    font-size: 26px;
+    line-height: 26px;
+  }
+
+  .landing-info {
+    bottom: 28px;
+  }
+
+  .landing-info h3 {
+    font-size: 15px;
+  }
+
+  .landing-info h2 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  h2.landing-info-h2 {
+    font-size: 32px;
+  }
+}
