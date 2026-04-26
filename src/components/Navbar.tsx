@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
@@ -9,6 +9,8 @@ gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 export let smoother: ScrollSmoother;
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
@@ -26,17 +28,19 @@ const Navbar = () => {
     document.querySelectorAll(".header ul a").forEach((elem) => {
       const element = elem as HTMLAnchorElement;
       const onClick = (e: Event) => {
-        if (window.innerWidth > 1024) {
-          e.preventDefault();
-          const section = element.getAttribute("data-href");
-          smoother.scrollTo(section, true, "top top");
-        }
+        e.preventDefault();
+        const section = element.getAttribute("data-href");
+        smoother.scrollTo(section, true, "top top");
+        setMenuOpen(false);
       };
       element.addEventListener("click", onClick);
       clickHandlers.push([element, onClick]);
     });
 
-    const onResize = () => ScrollSmoother.refresh(true);
+    const onResize = () => {
+      ScrollSmoother.refresh(true);
+      if (window.innerWidth >= 768) setMenuOpen(false);
+    };
     window.addEventListener("resize", onResize);
 
     return () => {
@@ -44,9 +48,10 @@ const Navbar = () => {
       window.removeEventListener("resize", onResize);
     };
   }, []);
+
   return (
     <>
-      <div className="header">
+      <div className={`header${menuOpen ? " nav-open" : ""}`}>
         <a href="#" className="navbar-title" data-cursor="disable">
           JS
         </a>
@@ -59,6 +64,16 @@ const Navbar = () => {
         >
           Jay Sharma
         </a>
+        <button
+          className="nav-hamburger"
+          onClick={() => setMenuOpen((o) => !o)}
+          aria-label="Toggle navigation"
+          data-cursor="disable"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <ul>
           <li>
             <a data-href="#about" href="#about">

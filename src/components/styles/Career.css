@@ -242,3 +242,23 @@
     justify-content: left;
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .career-section h2 {
+    font-size: 36px;
+    line-height: 38px;
+  }
+
+  .career-info h3 {
+    font-size: 26px;
+  }
+
+  .career-info h4 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .career-info h5 {
+    font-size: 14px;
+  }
+}

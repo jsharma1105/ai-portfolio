@@ -12,20 +12,26 @@ import setSplitText from "./utils/splitText";
 
 const TechStack = lazy(() => import("./TechStack"));
 
+const touchMQ = window.matchMedia("(hover: none) and (pointer: coarse)");
+
 const MainContainer = ({ children }: PropsWithChildren) => {
   const [isDesktopView, setIsDesktopView] = useState<boolean>(
-    window.innerWidth > 1024
+    !touchMQ.matches
   );
 
   useEffect(() => {
-    const resizeHandler = () => {
+    const update = () => {
       setSplitText();
-      setIsDesktopView(window.innerWidth > 1024);
+      setIsDesktopView(!touchMQ.matches);
     };
-    resizeHandler();
-    window.addEventListener("resize", resizeHandler);
+
+    update();
+    touchMQ.addEventListener("change", update);
+    window.addEventListener("resize", update);
+
     return () => {
-      window.removeEventListener("resize", resizeHandler);
+      touchMQ.removeEventListener("change", update);
+      window.removeEventListener("resize", update);
     };
   }, []);
 

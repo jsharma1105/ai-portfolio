@@ -282,3 +282,36 @@
     padding: 30px 0;
   }
 }
+
+/* ── Small mobile: pad slide so arrows don't overlap content ── */
+@media only screen and (max-width: 600px) {
+  .carousel-slide {
+    padding: 30px 58px;
+  }
+
+  .work-section h2 {
+    font-size: 32px;
+  }
+
+  .carousel-number h3 {
+    font-size: 28px;
+  }
+
+  .carousel-details h4 {
+    font-size: 17px;
+  }
+
+  .carousel-description {
+    font-size: 13px;
+  }
+
+  .carousel-tools p {
+    font-size: 13px;
+  }
+
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}

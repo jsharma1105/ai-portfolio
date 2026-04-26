@@ -81,3 +81,68 @@
     font-size: 18px;
   }
 }
+
+/* ── Hamburger button ── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 10000;
+}
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #eae5ec;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+/* ── Mobile nav overlay — activates on touch devices ── */
+@media (hover: none) and (pointer: coarse) {
+  .nav-hamburger {
+    display: flex;
+    align-items: center;
+  }
+  .header ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 14, 23, 0.97);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    column-gap: 0;
+    row-gap: 0;
+    z-index: 9998;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+  }
+  .nav-open ul {
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+  /* Hamburger → X animation */
+  .nav-open .nav-hamburger span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .nav-open .nav-hamburger span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  .nav-open .nav-hamburger span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}

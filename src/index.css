@@ -144,3 +144,14 @@ body {
     font-size: 40px;
   }
 }
+
+/* ── Mobile touch improvements ── */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media screen and (max-width: 500px) {
+  .techstack h2 {
+    font-size: 28px;
+  }
+}
