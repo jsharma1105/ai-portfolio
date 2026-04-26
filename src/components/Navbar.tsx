@@ -57,7 +57,7 @@ const Navbar = () => {
           target="_blank"
           rel="noreferrer"
         >
-          linkedin.com/in/jsharma3
+          Jay Sharma
         </a>
         <ul>
           <li>
