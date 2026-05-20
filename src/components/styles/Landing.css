@@ -396,13 +396,81 @@ h2.landing-info-h2 {
   }
 }
 
+/* ── Typewriter ── */
+.landing-typewriter {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  color: var(--gray-300);
+  min-height: 20px;
+  text-transform: uppercase;
+}
+
+.typewriter-cursor {
+  color: var(--accentColor);
+  animation: tw-blink 0.7s step-end infinite;
+  margin-left: 1px;
+}
+
+@keyframes tw-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ── Available badge ── */
+.landing-available {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 10px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--accentColor);
+  border: 1px solid rgba(94, 234, 212, 0.3);
+  border-radius: 20px;
+  padding: 4px 12px;
+  background: rgba(94, 234, 212, 0.05);
+}
+
+.available-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accentColor);
+  animation: dot-pulse 1.8s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes dot-pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(94, 234, 212, 0.5); }
+  50% { opacity: 0.7; box-shadow: 0 0 0 4px rgba(94, 234, 212, 0); }
+}
+
+/* ── Resume CTA ── */
+.landing-cta {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gray-200);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.landing-cta:hover {
+  color: var(--accentColor);
+  border-color: var(--accentColor);
+}
+
 /* ── Small mobile tweaks ── */
 @media screen and (max-width: 499px) {
-  .character-model {
-    height: 65vh;
-    bottom: 30px;
-  }
-
   .landing-intro {
     top: 8%;
   }

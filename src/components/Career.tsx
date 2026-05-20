@@ -16,32 +16,17 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Software Engineer</h4>
-                <h5>Alaska Airlines &middot; SeaTac, WA</h5>
+                <h4>Technology Lead</h4>
+                <h5>Infosys Limited &middot; Redmond, WA</h5>
               </div>
               <h3>NOW</h3>
             </div>
             <p>
-              Contracted directly with Alaska Airlines engineering &mdash; building
-              enterprise C# / .NET Core WebAPI services, optimizing Azure DevOps
-              CI/CD pipelines, implementing TDD and XP practices, and
-              identifying cloud cost reduction strategies on Azure.
-            </p>
-          </div>
-
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Technology Lead</h4>
-                <h5>Infosys &middot; Vancouver, BC</h5>
-              </div>
-              <h3>2019&ndash;24</h3>
-            </div>
-            <p>
-              Architected scalable .NET / Azure cloud solutions, led AI
-              initiatives on Azure AI Foundry with responsible LLM deployment,
-              built Synapse Analytics pipelines for real-time data at scale, and
-              mentored cross-functional engineering teams.
+              Leading teams of 6–10 engineers delivering scalable .NET / Azure
+              solutions at enterprise scale. Shipped 3 production AI agents on
+              Azure AI Foundry, built Synapse pipelines processing millions of
+              daily records, and drove measurable Azure cost reductions through
+              proactive cloud optimization.
             </p>
           </div>
 
@@ -55,9 +40,10 @@ const Career = () => {
             </div>
             <p>
               Architected secure Azure solutions &mdash; App Services, Functions,
-              and SQL &mdash; for mission-critical high-throughput applications.
-              Developed C# / .NET WebAPI services with SOLID principles and
-              maintained Azure DevOps CI/CD pipelines.
+              and SQL &mdash; powering mission-critical, high-throughput
+              applications. Delivered C# / .NET WebAPI services following SOLID
+              principles and streamlined Azure DevOps CI/CD pipelines to
+              accelerate release cycles.
             </p>
           </div>
 
@@ -70,9 +56,10 @@ const Career = () => {
               <h3>2016&ndash;17</h3>
             </div>
             <p>
-              Built responsive C# / MVC web applications with AWS integrations,
-              JavaScript front ends, and clean architecture patterns in an agile
-              team focused on code quality and continuous delivery.
+              Built responsive C# / MVC web applications with AWS integrations
+              for enterprise clients, maintaining high availability while
+              shipping bi-weekly releases through disciplined clean architecture
+              and test-driven development practices.
             </p>
           </div>
         </div>

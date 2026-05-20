@@ -1,6 +1,13 @@
 import { MdArrowOutward } from "react-icons/md";
 import "./styles/Contact.css";
 
+const certs = [
+  { name: "Azure AI Engineer", tier: "Associate", color: "#0078d4" },
+  { name: "Azure Developer", tier: "Associate", color: "#0078d4" },
+  { name: "Azure AI Fundamentals", tier: "Fundamentals", color: "#50e6ff" },
+  { name: "Azure Fundamentals", tier: "Fundamentals", color: "#50e6ff" },
+];
+
 const Contact = () => {
   return (
     <div className="contact-section section-container" id="contact">
@@ -15,11 +22,24 @@ const Contact = () => {
               </a>
             </p>
             <p>Seattle, WA &nbsp;&middot;&nbsp; (672) 515-7744</p>
+            <div className="seeking-row">
+              <span className="seeking-dot"></span>
+              Seeking: Senior AI / Cloud Engineering &middot; Remote or Seattle–Redmond
+            </div>
             <h4>Certifications</h4>
-            <p>Microsoft Certified: Azure AI Engineer</p>
-            <p>Microsoft Certified: Azure Developer Associate</p>
-            <p>Microsoft Certified: Azure AI Fundamentals</p>
-            <p>Microsoft Certified: Azure Fundamentals</p>
+            <div className="cert-grid">
+              {certs.map((c) => (
+                <div className="cert-badge" key={c.name}>
+                  <div className="cert-logo" style={{ borderColor: c.color, color: c.color }}>
+                    Az
+                  </div>
+                  <div className="cert-info">
+                    <span className="cert-name">{c.name}</span>
+                    <span className="cert-tier" style={{ color: c.color }}>{c.tier}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
           <div className="contact-box">
             <h4>Education</h4>
@@ -53,7 +73,7 @@ const Contact = () => {
           </div>
           <div className="contact-box">
             <h2>
-              Software Engineer &amp; <br /> <span>Cloud + AI Engineer</span>
+              Technology Lead &amp; <br /> <span>Azure AI Engineer</span>
             </h2>
           </div>
         </div>

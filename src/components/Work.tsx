@@ -9,13 +9,15 @@ const projects = [
     tools: "Azure AI Foundry · GPT-4o · Azure Functions · C# / .NET · Semantic Kernel",
     description: "Autonomous advertising agent that ingests campaign performance data, identifies underperforming creatives, generates optimized ad copy and audience segments, and auto-adjusts bids — boosting ROAS by 40%.",
     badge: "AI Agent",
+    link: "https://github.com/jsharma1105/adpilot",
   },
   {
-    title: "DocuSense RAG Platform",
-    category: "Enterprise Document Intelligence System",
-    tools: "Azure AI Search · Azure OpenAI · RAG · .NET WebAPI · Semantic Kernel",
-    description: "Production RAG pipeline over 100k+ technical documents. Hybrid vector + keyword retrieval with re-ranking, citation grounding, and a streaming .NET API that slashed support resolution time by 45%.",
-    badge: "AI Agent",
+    title: "Koshi",
+    category: "Context Engineering Toolkit for AI Agents",
+    tools: ".NET 10 · C# · MCP 1.0 · Native AOT · Python / PyPI",
+    description: "Open-source MCP server delivering 20 tools across retrieval, memory, context-packing, and team telemetry — all in a single zero-cloud binary. BM25 search, durable cross-session memory, token-budgeted prompt assembly, and agent turn scoring. 89 unit tests; ships as dotnet tool, pip package, or standalone binary.",
+    badge: "Open Source",
+    link: "https://github.com/jsharma1105/Koshi",
   },
   {
     title: "PipelineBot",
@@ -45,6 +47,7 @@ const badgeColors: Record<string, string> = {
   "Agentic AI":  "#a78bfa",
   "Enterprise":  "#60a5fa",
   "Data & Cloud":"#fb923c",
+  "Open Source": "#34d399",
 };
 
 const Work = () => {
@@ -125,6 +128,17 @@ const Work = () => {
                           <span className="tools-label">Stack</span>
                           <p>{project.tools}</p>
                         </div>
+                        {"link" in project && project.link && (
+                          <a
+                            className="carousel-link"
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-cursor="disable"
+                          >
+                            GitHub ↗
+                          </a>
+                        )}
                       </div>
                     </div>
                   </div>

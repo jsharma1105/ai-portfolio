@@ -123,6 +123,22 @@
   margin-top: 16px;
 }
 
+.carousel-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--accentColor);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.carousel-link:hover {
+  border-bottom-color: var(--accentColor);
+}
+
 .carousel-tools .tools-label {
   font-size: 14px;
   font-weight: 400;

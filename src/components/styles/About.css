@@ -30,6 +30,37 @@
   letter-spacing: 1px;
 }
 
+/* ── Stats strip ── */
+.about-stats {
+  display: flex;
+  gap: 24px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 90px;
+}
+
+.stat-value {
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--accentColor);
+  line-height: 1;
+  font-family: "Geist", sans-serif;
+}
+
+.stat-label {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gray-400);
+}
+
 @media only screen and (min-width: 600px) {
   .about-section {
     justify-content: center;

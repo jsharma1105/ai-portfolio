@@ -63,7 +63,10 @@ const WhatIDo = () => {
                 <div className="what-tags">LLM &amp; RAG</div>
                 <div className="what-tags">Prompt Engineering</div>
                 <div className="what-tags">GenAI</div>
-                <div className="what-tags">AI Agents</div>
+                <div className="what-tags">AI Agent</div>
+                <div className="what-tags">Agentic AI</div>
+                <div className="what-tags">MCP</div>
+                <div className="what-tags">A2A</div>
                 <div className="what-tags">Responsible AI</div>
               </div>
               <div className="what-arrow"></div>
@@ -80,7 +83,7 @@ const WhatIDo = () => {
               <h3>CLOUD &amp; BACKEND</h3>
               <h4>Enterprise .NET &amp; Azure at Scale</h4>
               <p>
-                9+ years building high-availability C# / .NET Core services on
+                10+ years building high-availability C# / .NET Core services on
                 Azure &mdash; microservices, CI/CD, Kubernetes, and distributed
                 systems that handle production load without breaking a sweat.
               </p>
